@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PSIContentView" customModule="AirQuality" customModuleProvider="target">
+            <connections>
+                <outlet property="aqiLabel" destination="2pn-sF-e0P" id="tOy-zN-vOb"/>
+                <outlet property="cityNameLabel" destination="qCB-9R-2CL" id="g63-eP-e5U"/>
+                <outlet property="psiLevelColourView" destination="qFk-gv-Kap" id="yzD-Ti-kOX"/>
+                <outlet property="timeLabel" destination="SNA-GN-TCP" id="jbZ-F8-aQz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scH-KV-CTn">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="85"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="PSI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-sF-e0P">
+                    <rect key="frame" x="352.5" y="10" width="37.5" height="65"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-gv-Kap">
+                    <rect key="frame" x="400" y="0.0" width="10" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="PQY-Bd-tIw"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCB-9R-2CL">
+                    <rect key="frame" x="20" y="39.5" width="322.5" height="25.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-GN-TCP">
+                    <rect key="frame" x="20" y="20" width="55" height="14.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.050980392159999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qCB-9R-2CL" firstAttribute="top" secondItem="SNA-GN-TCP" secondAttribute="bottom" constant="5" id="CxE-cj-KMo"/>
+                <constraint firstItem="qFk-gv-Kap" firstAttribute="trailing" secondItem="CHl-l0-dpQ" secondAttribute="trailing" id="MKa-zd-7Lw"/>
+                <constraint firstItem="2pn-sF-e0P" firstAttribute="top" secondItem="scH-KV-CTn" secondAttribute="top" constant="10" id="NUk-ec-9rj"/>
+                <constraint firstAttribute="bottom" secondItem="qFk-gv-Kap" secondAttribute="bottom" id="RtO-i0-4Ct"/>
+                <constraint firstItem="CHl-l0-dpQ" firstAttribute="bottom" secondItem="2pn-sF-e0P" secondAttribute="bottom" constant="10" id="c2W-ji-AKo"/>
+                <constraint firstItem="SNA-GN-TCP" firstAttribute="leading" secondItem="CHl-l0-dpQ" secondAttribute="leading" constant="20" id="dP6-1H-prQ"/>
+                <constraint firstItem="SNA-GN-TCP" firstAttribute="top" secondItem="CHl-l0-dpQ" secondAttribute="top" constant="20" id="hZI-j9-tjT"/>
+                <constraint firstItem="2pn-sF-e0P" firstAttribute="leading" secondItem="qCB-9R-2CL" secondAttribute="trailing" constant="10" id="iTx-ed-2Vx"/>
+                <constraint firstItem="CHl-l0-dpQ" firstAttribute="trailing" secondItem="2pn-sF-e0P" secondAttribute="trailing" constant="20" id="ohU-xs-9Mt"/>
+                <constraint firstItem="qFk-gv-Kap" firstAttribute="top" secondItem="scH-KV-CTn" secondAttribute="top" id="tHv-6G-9rZ"/>
+                <constraint firstItem="qCB-9R-2CL" firstAttribute="leading" secondItem="CHl-l0-dpQ" secondAttribute="leading" constant="20" id="taS-2I-i6E"/>
+                <constraint firstItem="CHl-l0-dpQ" firstAttribute="bottom" secondItem="qCB-9R-2CL" secondAttribute="bottom" constant="20" id="w6X-oS-t2W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="CHl-l0-dpQ"/>
+            <point key="canvasLocation" x="92.799999999999997" y="55.322338830584712"/>
+        </view>
+    </objects>
+</document>

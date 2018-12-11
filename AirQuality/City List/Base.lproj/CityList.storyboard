@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzy-jf-eZY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City List Table View Controller-->
+        <scene sceneID="o35-4U-yCC">
+            <objects>
+                <tableViewController storyboardIdentifier="CityListTableViewController" id="wzy-jf-eZY" customClass="CityListTableViewController" customModule="AirQuality" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VBC-yP-f2l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CityListTableViewCell" rowHeight="119" id="w1f-Zv-LZd" customClass="CityListTableViewCell" customModule="AirQuality" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1f-Zv-LZd" id="WBK-cs-sRz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-T2-VZx" customClass="PSIContentView" customModule="AirQuality" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="118.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="8Yh-T2-VZx" secondAttribute="bottom" id="QDD-KA-NS0"/>
+                                        <constraint firstItem="8Yh-T2-VZx" firstAttribute="leading" secondItem="WBK-cs-sRz" secondAttribute="leading" id="Vxt-Rp-3SR"/>
+                                        <constraint firstItem="8Yh-T2-VZx" firstAttribute="top" secondItem="WBK-cs-sRz" secondAttribute="top" id="hAb-Ht-ghM"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Yh-T2-VZx" secondAttribute="trailing" id="kuR-aw-BYR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="Q7I-P7-Qtd"/>
+                                <connections>
+                                    <outlet property="subContentView" destination="8Yh-T2-VZx" id="EOT-f1-u22"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wzy-jf-eZY" id="C5O-Za-vWs"/>
+                            <outlet property="delegate" destination="wzy-jf-eZY" id="5SN-eu-Eqn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7Z-GN-ufE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>

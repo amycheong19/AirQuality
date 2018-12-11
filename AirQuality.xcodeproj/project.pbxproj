@@ -1,0 +1,1004 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D0E7DDD878DCFC2E88D4F5A /* Pods_AQIExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66801EE6FE06FCFABAA15B2E /* Pods_AQIExtension.framework */; };
+		8E754BCFA62A53EAAC88AE52 /* Pods_AirQualityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FE80DC52AF65BF53C3FCE0 /* Pods_AirQualityTests.framework */; };
+		91ACB9477A7EB2E145662126 /* Pods_AirQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACB803E5261D10569C1A645 /* Pods_AirQuality.framework */; };
+		FC0D391021B38D6600FF69AC /* AirPollutionLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D390F21B38D6600FF69AC /* AirPollutionLevel.swift */; };
+		FC0D391721B3959D00FF69AC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0D391621B3959D00FF69AC /* NotificationCenter.framework */; };
+		FC0D391A21B3959D00FF69AC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D391921B3959D00FF69AC /* TodayViewController.swift */; };
+		FC0D391D21B3959D00FF69AC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0D391B21B3959D00FF69AC /* MainInterface.storyboard */; };
+		FC0D392121B3959D00FF69AC /* AQIExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FC0D391521B3959D00FF69AC /* AQIExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FC0D392A21B3C0B300FF69AC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D392921B3C0B300FF69AC /* Date+Extension.swift */; };
+		FC3F840B21A2715A005885D9 /* CityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F840921A2715A005885D9 /* CityListTableViewCell.swift */; };
+		FC3F841121A2A4D2005885D9 /* AirQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F841021A2A4D2005885D9 /* AirQuality.swift */; };
+		FC7EFD5721A1270200BE1815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD5621A1270200BE1815 /* AppDelegate.swift */; };
+		FC7EFD5C21A1270200BE1815 /* CityList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7EFD5A21A1270200BE1815 /* CityList.storyboard */; };
+		FC7EFD5E21A1270400BE1815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7EFD5D21A1270400BE1815 /* Assets.xcassets */; };
+		FC7EFD6121A1270400BE1815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7EFD5F21A1270400BE1815 /* LaunchScreen.storyboard */; };
+		FC7EFD6C21A1270400BE1815 /* AirQualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD6B21A1270400BE1815 /* AirQualityTests.swift */; };
+		FC7EFD9321A1328B00BE1815 /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9021A1328B00BE1815 /* CityListViewModel.swift */; };
+		FC7EFD9421A1328B00BE1815 /* CityListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9121A1328B00BE1815 /* CityListTableViewController.swift */; };
+		FC7EFD9521A1328B00BE1815 /* CityListViewDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9221A1328B00BE1815 /* CityListViewDependency.swift */; };
+		FC7EFDA821A1336D00BE1815 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9821A1336D00BE1815 /* DesignableView.swift */; };
+		FC7EFDA921A1336D00BE1815 /* View Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9921A1336D00BE1815 /* View Extension.swift */; };
+		FC7EFDAA21A1336D00BE1815 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9A21A1336D00BE1815 /* NibLoadable.swift */; };
+		FC7EFDAB21A1336D00BE1815 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9D21A1336D00BE1815 /* ViewState.swift */; };
+		FC7EFDAC21A1336D00BE1815 /* ViewDependable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFD9F21A1336D00BE1815 /* ViewDependable.swift */; };
+		FC7EFDAD21A1336D00BE1815 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFDA021A1336D00BE1815 /* ViewModelable.swift */; };
+		FC7EFDAE21A1336D00BE1815 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFDA121A1336D00BE1815 /* ViewModelType.swift */; };
+		FC7EFDAF21A1336D00BE1815 /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFDA221A1336D00BE1815 /* SegueIdentifiable.swift */; };
+		FC7EFDB021A1336D00BE1815 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFDA421A1336D00BE1815 /* FlowViewController.swift */; };
+		FC7EFDB121A1336D00BE1815 /* FlowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFDA521A1336D00BE1815 /* FlowTableViewController.swift */; };
+		FC7EFDB221A1336D00BE1815 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFDA721A1336D00BE1815 /* ViewModel.swift */; };
+		FC7EFE4021A155FC00BE1815 /* ApplicationServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFE3E21A155FC00BE1815 /* ApplicationServiceProvider.swift */; };
+		FC7EFE4521A1568600BE1815 /* ApplicationServiceAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EFE4421A1568600BE1815 /* ApplicationServiceAvailable.swift */; };
+		FC83150121BF901700FC9023 /* PSIContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8314FF21BF901700FC9023 /* PSIContentView.xib */; };
+		FC83150321BF950100FC9023 /* PSIContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83150221BF950100FC9023 /* PSIContentView.swift */; };
+		FCE1E1BF21B0D59700969C74 /* AirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1E1BE21B0D59700969C74 /* AirQualityService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC0D391F21B3959D00FF69AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7EFD4B21A1270100BE1815 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC0D391421B3959D00FF69AC;
+			remoteInfo = AQIExtension;
+		};
+		FC7EFD6821A1270400BE1815 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7EFD4B21A1270100BE1815 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC7EFD5221A1270200BE1815;
+			remoteInfo = AirQuality;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC0D392521B3959D00FF69AC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FC0D392121B3959D00FF69AC /* AQIExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFDB821A1343800BE1815 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1EB4F435BB8FCA54FD999638 /* Pods-AQIExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQIExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQIExtension/Pods-AQIExtension.release.xcconfig"; sourceTree = "<group>"; };
+		3DBC9E7687C9AA2D349AF1A8 /* Pods-AirQualityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityTests/Pods-AirQualityTests.release.xcconfig"; sourceTree = "<group>"; };
+		405DDE42E1BD64FB1802F97B /* Pods-AQIExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQIExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQIExtension/Pods-AQIExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		66801EE6FE06FCFABAA15B2E /* Pods_AQIExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AQIExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA06A33463E879B93C95385 /* Pods-AirQualityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityTests/Pods-AirQualityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8ACB803E5261D10569C1A645 /* Pods_AirQuality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQuality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B832AD375B6935090D7141F1 /* Pods-AirQuality.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuality.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuality/Pods-AirQuality.debug.xcconfig"; sourceTree = "<group>"; };
+		B9FE80DC52AF65BF53C3FCE0 /* Pods_AirQualityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27D6BD38A78AA225CBA6A05 /* Pods-AirQuality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuality.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuality/Pods-AirQuality.release.xcconfig"; sourceTree = "<group>"; };
+		FC0D390F21B38D6600FF69AC /* AirPollutionLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPollutionLevel.swift; sourceTree = "<group>"; };
+		FC0D391521B3959D00FF69AC /* AQIExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AQIExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC0D391621B3959D00FF69AC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FC0D391921B3959D00FF69AC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		FC0D391C21B3959D00FF69AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FC0D391E21B3959D00FF69AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC0D392921B3C0B300FF69AC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FC3F840921A2715A005885D9 /* CityListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListTableViewCell.swift; sourceTree = "<group>"; };
+		FC3F841021A2A4D2005885D9 /* AirQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQuality.swift; sourceTree = "<group>"; };
+		FC7EFD5321A1270200BE1815 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC7EFD5621A1270200BE1815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC7EFD5B21A1270200BE1815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CityList.storyboard; sourceTree = "<group>"; };
+		FC7EFD5D21A1270400BE1815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC7EFD6021A1270400BE1815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC7EFD6221A1270400BE1815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7EFD6721A1270400BE1815 /* AirQualityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC7EFD6B21A1270400BE1815 /* AirQualityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityTests.swift; sourceTree = "<group>"; };
+		FC7EFD6D21A1270400BE1815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7EFD9021A1328B00BE1815 /* CityListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListViewModel.swift; sourceTree = "<group>"; };
+		FC7EFD9121A1328B00BE1815 /* CityListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListTableViewController.swift; sourceTree = "<group>"; };
+		FC7EFD9221A1328B00BE1815 /* CityListViewDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListViewDependency.swift; sourceTree = "<group>"; };
+		FC7EFD9821A1336D00BE1815 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		FC7EFD9921A1336D00BE1815 /* View Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View Extension.swift"; sourceTree = "<group>"; };
+		FC7EFD9A21A1336D00BE1815 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		FC7EFD9D21A1336D00BE1815 /* ViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		FC7EFD9F21A1336D00BE1815 /* ViewDependable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDependable.swift; sourceTree = "<group>"; };
+		FC7EFDA021A1336D00BE1815 /* ViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
+		FC7EFDA121A1336D00BE1815 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		FC7EFDA221A1336D00BE1815 /* SegueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
+		FC7EFDA421A1336D00BE1815 /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		FC7EFDA521A1336D00BE1815 /* FlowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTableViewController.swift; sourceTree = "<group>"; };
+		FC7EFDA721A1336D00BE1815 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FC7EFE3E21A155FC00BE1815 /* ApplicationServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServiceProvider.swift; sourceTree = "<group>"; };
+		FC7EFE4421A1568600BE1815 /* ApplicationServiceAvailable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServiceAvailable.swift; sourceTree = "<group>"; };
+		FC8314FF21BF901700FC9023 /* PSIContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PSIContentView.xib; sourceTree = "<group>"; };
+		FC83150221BF950100FC9023 /* PSIContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIContentView.swift; sourceTree = "<group>"; };
+		FCE1E1BE21B0D59700969C74 /* AirQualityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirQualityService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC0D391221B3959D00FF69AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC0D391721B3959D00FF69AC /* NotificationCenter.framework in Frameworks */,
+				2D0E7DDD878DCFC2E88D4F5A /* Pods_AQIExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFD5021A1270200BE1815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91ACB9477A7EB2E145662126 /* Pods_AirQuality.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFD6421A1270400BE1815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E754BCFA62A53EAAC88AE52 /* Pods_AirQualityTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE923100F6319B57FF984C40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB803E5261D10569C1A645 /* Pods_AirQuality.framework */,
+				B9FE80DC52AF65BF53C3FCE0 /* Pods_AirQualityTests.framework */,
+				FC0D391621B3959D00FF69AC /* NotificationCenter.framework */,
+				66801EE6FE06FCFABAA15B2E /* Pods_AQIExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F13A8E4CB3598A6C5FCD4A9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B832AD375B6935090D7141F1 /* Pods-AirQuality.debug.xcconfig */,
+				D27D6BD38A78AA225CBA6A05 /* Pods-AirQuality.release.xcconfig */,
+				7EA06A33463E879B93C95385 /* Pods-AirQualityTests.debug.xcconfig */,
+				3DBC9E7687C9AA2D349AF1A8 /* Pods-AirQualityTests.release.xcconfig */,
+				405DDE42E1BD64FB1802F97B /* Pods-AQIExtension.debug.xcconfig */,
+				1EB4F435BB8FCA54FD999638 /* Pods-AQIExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC0D391821B3959D00FF69AC /* AQIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FC0D391921B3959D00FF69AC /* TodayViewController.swift */,
+				FC0D391B21B3959D00FF69AC /* MainInterface.storyboard */,
+				FC0D391E21B3959D00FF69AC /* Info.plist */,
+			);
+			path = AQIExtension;
+			sourceTree = "<group>";
+		};
+		FC0D392821B3C0A100FF69AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC0D392921B3C0B300FF69AC /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC3F840621A27052005885D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F840921A2715A005885D9 /* CityListTableViewCell.swift */,
+				FC8314FF21BF901700FC9023 /* PSIContentView.xib */,
+				FC83150221BF950100FC9023 /* PSIContentView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FC3F840F21A2A4BA005885D9 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F841021A2A4D2005885D9 /* AirQuality.swift */,
+				FC0D390F21B38D6600FF69AC /* AirPollutionLevel.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		FC7EFD4A21A1270100BE1815 = {
+			isa = PBXGroup;
+			children = (
+				FC7EFE4221A1568600BE1815 /* Domain */,
+				FC7EFE3C21A155FC00BE1815 /* External */,
+				FC7EFD5521A1270200BE1815 /* AirQuality */,
+				FC7EFD9621A1336D00BE1815 /* User Interface */,
+				FC7EFD6A21A1270400BE1815 /* AirQualityTests */,
+				FC0D391821B3959D00FF69AC /* AQIExtension */,
+				FC7EFD5421A1270200BE1815 /* Products */,
+				F13A8E4CB3598A6C5FCD4A9D /* Pods */,
+				BE923100F6319B57FF984C40 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC7EFD5421A1270200BE1815 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD5321A1270200BE1815 /* AirQuality.app */,
+				FC7EFD6721A1270400BE1815 /* AirQualityTests.xctest */,
+				FC0D391521B3959D00FF69AC /* AQIExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC7EFD5521A1270200BE1815 /* AirQuality */ = {
+			isa = PBXGroup;
+			children = (
+				FC0D392821B3C0A100FF69AC /* Extensions */,
+				FC7EFD5621A1270200BE1815 /* AppDelegate.swift */,
+				FC7EFD8F21A1328B00BE1815 /* City List */,
+				FC7EFDB321A1338800BE1815 /* Resource */,
+			);
+			path = AirQuality;
+			sourceTree = "<group>";
+		};
+		FC7EFD6A21A1270400BE1815 /* AirQualityTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD6B21A1270400BE1815 /* AirQualityTests.swift */,
+				FC7EFD6D21A1270400BE1815 /* Info.plist */,
+			);
+			path = AirQualityTests;
+			sourceTree = "<group>";
+		};
+		FC7EFD8F21A1328B00BE1815 /* City List */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F840621A27052005885D9 /* Cells */,
+				FC7EFD9021A1328B00BE1815 /* CityListViewModel.swift */,
+				FC7EFD5A21A1270200BE1815 /* CityList.storyboard */,
+				FC7EFD9121A1328B00BE1815 /* CityListTableViewController.swift */,
+				FC7EFD9221A1328B00BE1815 /* CityListViewDependency.swift */,
+			);
+			path = "City List";
+			sourceTree = "<group>";
+		};
+		FC7EFD9621A1336D00BE1815 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD9721A1336D00BE1815 /* View */,
+				FC7EFD9B21A1336D00BE1815 /* Flow */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		FC7EFD9721A1336D00BE1815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD9821A1336D00BE1815 /* DesignableView.swift */,
+				FC7EFD9921A1336D00BE1815 /* View Extension.swift */,
+				FC7EFD9A21A1336D00BE1815 /* NibLoadable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC7EFD9B21A1336D00BE1815 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD9C21A1336D00BE1815 /* Enum */,
+				FC7EFD9E21A1336D00BE1815 /* Protocol */,
+				FC7EFDA321A1336D00BE1815 /* View */,
+				FC7EFDA621A1336D00BE1815 /* View Model */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		FC7EFD9C21A1336D00BE1815 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD9D21A1336D00BE1815 /* ViewState.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		FC7EFD9E21A1336D00BE1815 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD9F21A1336D00BE1815 /* ViewDependable.swift */,
+				FC7EFDA021A1336D00BE1815 /* ViewModelable.swift */,
+				FC7EFDA121A1336D00BE1815 /* ViewModelType.swift */,
+				FC7EFDA221A1336D00BE1815 /* SegueIdentifiable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FC7EFDA321A1336D00BE1815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFDA421A1336D00BE1815 /* FlowViewController.swift */,
+				FC7EFDA521A1336D00BE1815 /* FlowTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC7EFDA621A1336D00BE1815 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFDA721A1336D00BE1815 /* ViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		FC7EFDB321A1338800BE1815 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFD5D21A1270400BE1815 /* Assets.xcassets */,
+				FC7EFD5F21A1270400BE1815 /* LaunchScreen.storyboard */,
+				FC7EFD6221A1270400BE1815 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FC7EFE3C21A155FC00BE1815 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFE3D21A155FC00BE1815 /* Shared */,
+				FCE1E1BD21B0D59700969C74 /* AirQuality */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		FC7EFE3D21A155FC00BE1815 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFE3E21A155FC00BE1815 /* ApplicationServiceProvider.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FC7EFE4221A1568600BE1815 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F840F21A2A4BA005885D9 /* Weather */,
+				FC7EFE4321A1568600BE1815 /* Shared */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FC7EFE4321A1568600BE1815 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FC7EFE4421A1568600BE1815 /* ApplicationServiceAvailable.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FCE1E1BD21B0D59700969C74 /* AirQuality */ = {
+			isa = PBXGroup;
+			children = (
+				FCE1E1BE21B0D59700969C74 /* AirQualityService.swift */,
+			);
+			path = AirQuality;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC0D391421B3959D00FF69AC /* AQIExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC0D392221B3959D00FF69AC /* Build configuration list for PBXNativeTarget "AQIExtension" */;
+			buildPhases = (
+				DD7C6CAF1531177B54BCB541 /* [CP] Check Pods Manifest.lock */,
+				FC0D391121B3959D00FF69AC /* Sources */,
+				FC0D391221B3959D00FF69AC /* Frameworks */,
+				FC0D391321B3959D00FF69AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AQIExtension;
+			productName = AQIExtension;
+			productReference = FC0D391521B3959D00FF69AC /* AQIExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FC7EFD5221A1270200BE1815 /* AirQuality */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC7EFD7021A1270400BE1815 /* Build configuration list for PBXNativeTarget "AirQuality" */;
+			buildPhases = (
+				ECE6749910C735C44C41E062 /* [CP] Check Pods Manifest.lock */,
+				FC7EFD4F21A1270200BE1815 /* Sources */,
+				FC7EFD5021A1270200BE1815 /* Frameworks */,
+				FC7EFD5121A1270200BE1815 /* Resources */,
+				FC7EFDB821A1343800BE1815 /* Embed Frameworks */,
+				584AF24B7125249A747EB58E /* [CP] Embed Pods Frameworks */,
+				FC0D392521B3959D00FF69AC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC0D392021B3959D00FF69AC /* PBXTargetDependency */,
+			);
+			name = AirQuality;
+			productName = AirQuality;
+			productReference = FC7EFD5321A1270200BE1815 /* AirQuality.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC7EFD6621A1270400BE1815 /* AirQualityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC7EFD7321A1270400BE1815 /* Build configuration list for PBXNativeTarget "AirQualityTests" */;
+			buildPhases = (
+				A113D47C57838CFC3C88FDD7 /* [CP] Check Pods Manifest.lock */,
+				FC7EFD6321A1270400BE1815 /* Sources */,
+				FC7EFD6421A1270400BE1815 /* Frameworks */,
+				FC7EFD6521A1270400BE1815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC7EFD6921A1270400BE1815 /* PBXTargetDependency */,
+			);
+			name = AirQualityTests;
+			productName = AirQualityTests;
+			productReference = FC7EFD6721A1270400BE1815 /* AirQualityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC7EFD4B21A1270100BE1815 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Amy Cheong";
+				TargetAttributes = {
+					FC0D391421B3959D00FF69AC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					FC7EFD5221A1270200BE1815 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					FC7EFD6621A1270400BE1815 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FC7EFD5221A1270200BE1815;
+					};
+				};
+			};
+			buildConfigurationList = FC7EFD4E21A1270200BE1815 /* Build configuration list for PBXProject "AirQuality" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC7EFD4A21A1270100BE1815;
+			productRefGroup = FC7EFD5421A1270200BE1815 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC7EFD5221A1270200BE1815 /* AirQuality */,
+				FC7EFD6621A1270400BE1815 /* AirQualityTests */,
+				FC0D391421B3959D00FF69AC /* AQIExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC0D391321B3959D00FF69AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC0D391D21B3959D00FF69AC /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFD5121A1270200BE1815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7EFD6121A1270400BE1815 /* LaunchScreen.storyboard in Resources */,
+				FC7EFD5E21A1270400BE1815 /* Assets.xcassets in Resources */,
+				FC83150121BF901700FC9023 /* PSIContentView.xib in Resources */,
+				FC7EFD5C21A1270200BE1815 /* CityList.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFD6521A1270400BE1815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		584AF24B7125249A747EB58E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AirQuality/Pods-AirQuality-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQuality/Pods-AirQuality-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A113D47C57838CFC3C88FDD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirQualityTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD7C6CAF1531177B54BCB541 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AQIExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE6749910C735C44C41E062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirQuality-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC0D391121B3959D00FF69AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC0D391A21B3959D00FF69AC /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFD4F21A1270200BE1815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7EFD9521A1328B00BE1815 /* CityListViewDependency.swift in Sources */,
+				FC0D392A21B3C0B300FF69AC /* Date+Extension.swift in Sources */,
+				FC7EFDAA21A1336D00BE1815 /* NibLoadable.swift in Sources */,
+				FC7EFDA921A1336D00BE1815 /* View Extension.swift in Sources */,
+				FC83150321BF950100FC9023 /* PSIContentView.swift in Sources */,
+				FC7EFD9421A1328B00BE1815 /* CityListTableViewController.swift in Sources */,
+				FC7EFDB121A1336D00BE1815 /* FlowTableViewController.swift in Sources */,
+				FC0D391021B38D6600FF69AC /* AirPollutionLevel.swift in Sources */,
+				FC7EFDA821A1336D00BE1815 /* DesignableView.swift in Sources */,
+				FC7EFDB221A1336D00BE1815 /* ViewModel.swift in Sources */,
+				FC7EFDAB21A1336D00BE1815 /* ViewState.swift in Sources */,
+				FC7EFD9321A1328B00BE1815 /* CityListViewModel.swift in Sources */,
+				FC7EFDB021A1336D00BE1815 /* FlowViewController.swift in Sources */,
+				FC3F840B21A2715A005885D9 /* CityListTableViewCell.swift in Sources */,
+				FC7EFDAE21A1336D00BE1815 /* ViewModelType.swift in Sources */,
+				FC7EFDAC21A1336D00BE1815 /* ViewDependable.swift in Sources */,
+				FC7EFE4021A155FC00BE1815 /* ApplicationServiceProvider.swift in Sources */,
+				FC7EFE4521A1568600BE1815 /* ApplicationServiceAvailable.swift in Sources */,
+				FC3F841121A2A4D2005885D9 /* AirQuality.swift in Sources */,
+				FC7EFD5721A1270200BE1815 /* AppDelegate.swift in Sources */,
+				FCE1E1BF21B0D59700969C74 /* AirQualityService.swift in Sources */,
+				FC7EFDAF21A1336D00BE1815 /* SegueIdentifiable.swift in Sources */,
+				FC7EFDAD21A1336D00BE1815 /* ViewModelable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC7EFD6321A1270400BE1815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7EFD6C21A1270400BE1815 /* AirQualityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC0D392021B3959D00FF69AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC0D391421B3959D00FF69AC /* AQIExtension */;
+			targetProxy = FC0D391F21B3959D00FF69AC /* PBXContainerItemProxy */;
+		};
+		FC7EFD6921A1270400BE1815 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC7EFD5221A1270200BE1815 /* AirQuality */;
+			targetProxy = FC7EFD6821A1270400BE1815 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC0D391B21B3959D00FF69AC /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC0D391C21B3959D00FF69AC /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		FC7EFD5A21A1270200BE1815 /* CityList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC7EFD5B21A1270200BE1815 /* Base */,
+			);
+			name = CityList.storyboard;
+			sourceTree = "<group>";
+		};
+		FC7EFD5F21A1270400BE1815 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC7EFD6021A1270400BE1815 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC0D392321B3959D00FF69AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 405DDE42E1BD64FB1802F97B /* Pods-AQIExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AQIExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AmyCheong.AirQuality.AQIExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC0D392421B3959D00FF69AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB4F435BB8FCA54FD999638 /* Pods-AQIExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AQIExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AmyCheong.AirQuality.AQIExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC7EFD6E21A1270400BE1815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC7EFD6F21A1270400BE1815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC7EFD7121A1270400BE1815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B832AD375B6935090D7141F1 /* Pods-AirQuality.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = AirQuality/Resource/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AmyCheong.AirQuality;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC7EFD7221A1270400BE1815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D27D6BD38A78AA225CBA6A05 /* Pods-AirQuality.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = AirQuality/Resource/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AmyCheong.AirQuality;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC7EFD7421A1270400BE1815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EA06A33463E879B93C95385 /* Pods-AirQualityTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AmyCheong.AirQualityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQuality.app/AirQuality";
+			};
+			name = Debug;
+		};
+		FC7EFD7521A1270400BE1815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DBC9E7687C9AA2D349AF1A8 /* Pods-AirQualityTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AmyCheong.AirQualityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQuality.app/AirQuality";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC0D392221B3959D00FF69AC /* Build configuration list for PBXNativeTarget "AQIExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC0D392321B3959D00FF69AC /* Debug */,
+				FC0D392421B3959D00FF69AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC7EFD4E21A1270200BE1815 /* Build configuration list for PBXProject "AirQuality" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7EFD6E21A1270400BE1815 /* Debug */,
+				FC7EFD6F21A1270400BE1815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC7EFD7021A1270400BE1815 /* Build configuration list for PBXNativeTarget "AirQuality" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7EFD7121A1270400BE1815 /* Debug */,
+				FC7EFD7221A1270400BE1815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC7EFD7321A1270400BE1815 /* Build configuration list for PBXNativeTarget "AirQualityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7EFD7421A1270400BE1815 /* Debug */,
+				FC7EFD7521A1270400BE1815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC7EFD4B21A1270100BE1815 /* Project object */;
+}
