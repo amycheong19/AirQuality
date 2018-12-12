@@ -12,6 +12,7 @@ import Moya
 final class CityListViewModel: ViewModel<CityListViewDependency> {
    struct DataSourceContext: ViewContext {
       var airQualityArray: [AirQuality] = []
+      var filteredAirQualityArray: [AirQuality] = []
    }
 
    var stateChanged: ((ViewState, DataSourceContext?) -> Void)?
@@ -22,7 +23,8 @@ final class CityListViewModel: ViewModel<CityListViewDependency> {
          case .success(let response):
             do {
                let results = try JSONDecoder().decode(AirQuality.self, from: response.data)
-               self.stateChanged?(.ideal, .init(airQualityArray: [results]))
+               self.stateChanged?(.ideal, .init(airQualityArray: [results],
+                                                filteredAirQualityArray: [results]))
             } catch let error {
                debugPrint(error)
             }
@@ -30,8 +32,12 @@ final class CityListViewModel: ViewModel<CityListViewDependency> {
             debugPrint(error)
          }
       }
+   }
 
-
-   } 
+   func filter(airQualityArray: [AirQuality], query: String) {
+      let filteredCities = airQualityArray.filteredBySearchText(query)
+      stateChanged?(.ideal, .init(airQualityArray: airQualityArray,
+                                  filteredAirQualityArray: filteredCities))
+   }
 
 }

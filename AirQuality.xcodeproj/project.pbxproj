@@ -215,13 +215,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		FC3F840F21A2A4BA005885D9 /* Weather */ = {
+		FC3F840F21A2A4BA005885D9 /* AirQuality */ = {
 			isa = PBXGroup;
 			children = (
 				FC3F841021A2A4D2005885D9 /* AirQuality.swift */,
 				FC0D390F21B38D6600FF69AC /* AirPollutionLevel.swift */,
 			);
-			path = Weather;
+			path = AirQuality;
 			sourceTree = "<group>";
 		};
 		FC7EFD4A21A1270100BE1815 = {
@@ -377,7 +377,7 @@
 		FC7EFE4221A1568600BE1815 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				FC3F840F21A2A4BA005885D9 /* Weather */,
+				FC3F840F21A2A4BA005885D9 /* AirQuality */,
 				FC7EFE4321A1568600BE1815 /* Shared */,
 			);
 			path = Domain;

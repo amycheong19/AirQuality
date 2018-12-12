@@ -8,8 +8,9 @@
 
 import UIKit
 
- class CityListTableViewController: FlowTableViewController<CityListViewModel> {
+ class CityListTableViewController: FlowTableViewController<CityListViewModel>, UISearchBarDelegate {
 
+   @IBOutlet private weak var searchBar: UISearchBar!
    private var context = CityListViewModel.DataSourceContext() {
       didSet {
          tableView.reloadData()
@@ -42,11 +43,17 @@ import UIKit
          return UITableViewCell()
       }
 
-      cell.display(context.airQualityArray[indexPath.row])
+      cell.display(context.filteredAirQualityArray[indexPath.row])
       return cell
    }
 
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return context.airQualityArray.count
+      return context.filteredAirQualityArray.count
+   }
+
+   // MARK: - UISearchBarDelegate
+   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+      viewModel.filter(airQualityArray: context.airQualityArray,
+                       query: searchText)
    }
 }

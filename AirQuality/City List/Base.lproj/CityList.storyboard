@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzy-jf-eZY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vuR-9e-br6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--City List Table View Controller-->
+        <!--Cities-->
         <scene sceneID="o35-4U-yCC">
             <objects>
                 <tableViewController storyboardIdentifier="CityListTableViewController" id="wzy-jf-eZY" customClass="CityListTableViewController" customModule="AirQuality" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,9 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="KIW-M0-YwY">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="wzy-jf-eZY" id="awo-TW-aau"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CityListTableViewCell" rowHeight="119" id="w1f-Zv-LZd" customClass="CityListTableViewCell" customModule="AirQuality" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="119"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1f-Zv-LZd" id="WBK-cs-sRz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="118.5"/>
@@ -31,7 +39,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="8Yh-T2-VZx" secondAttribute="bottom" id="QDD-KA-NS0"/>
                                         <constraint firstItem="8Yh-T2-VZx" firstAttribute="leading" secondItem="WBK-cs-sRz" secondAttribute="leading" id="Vxt-Rp-3SR"/>
@@ -50,10 +58,45 @@
                             <outlet property="delegate" destination="wzy-jf-eZY" id="5SN-eu-Eqn"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Cities" id="L9T-3L-9YB">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Windy" id="iae-xU-j1R"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="KIW-M0-YwY" id="4zk-ev-gqt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7Z-GN-ufE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="KOo-Dx-C1Q">
+                    <connections>
+                        <outlet property="delegate" destination="wzy-jf-eZY" id="39F-VN-nb7"/>
+                        <outlet property="searchContentsController" destination="wzy-jf-eZY" id="yuP-bd-CYh"/>
+                        <outlet property="searchResultsDataSource" destination="wzy-jf-eZY" id="BX4-iE-A3D"/>
+                        <outlet property="searchResultsDelegate" destination="wzy-jf-eZY" id="bGZ-D5-WDl"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="836" y="160.56971514242881"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JiG-T1-rYP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vuR-9e-br6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="a38-V7-Nec">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wzy-jf-eZY" kind="relationship" relationship="rootViewController" id="Mho-0J-PXm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHK-Qf-b0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-103.2" y="160.56971514242881"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Windy" width="42" height="26"/>
+    </resources>
 </document>

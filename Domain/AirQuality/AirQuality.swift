@@ -35,3 +35,21 @@ public struct AirQuality: Codable{
    public var data: DataResponse
    public var status: String
 }
+
+public extension Array where Element == AirQuality {
+   public func filteredBySearchText(_ text: String) -> [AirQuality] {
+      if text.isEmpty {
+         // If search text is empty, we shall not modify anything
+         return self
+      }
+
+      return (self as [AirQuality]).filter({ (airQuality) -> Bool in
+         let city = airQuality.data.city.name.lowercased()
+         let lowercaseSearchText = text.lowercased()
+         return
+            city.contains(lowercaseSearchText)
+      })
+   }
+
+}
+

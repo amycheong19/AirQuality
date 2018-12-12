@@ -12,6 +12,7 @@ final class PSIContentView: DesignableView {
    @IBOutlet weak var cityNameLabel: UILabel!
    @IBOutlet weak var timeLabel: UILabel!
    @IBOutlet weak var aqiLabel: UILabel!
+   @IBOutlet weak var aqiDescLabel: UILabel!
    @IBOutlet weak var psiLevelColourView: UIView!
 
    func display(_ airQuality: AirQuality) {
@@ -30,5 +31,6 @@ final class PSIContentView: DesignableView {
 
       let pollutionLevel = AirPollutionLevel.getLevel(by: airQuality.data.aqi)
       psiLevelColourView.backgroundColor = pollutionLevel.color
+      aqiDescLabel.text = pollutionLevel.title
    }
 }
